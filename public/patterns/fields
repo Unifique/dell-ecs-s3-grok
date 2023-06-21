@@ -39,5 +39,3 @@ host
 facility
 severity_label
 facility_label
-
-ecs_bucket_quota_exceeded
