@@ -18,7 +18,7 @@
     "ECS_ALERT_TYPE": "%{GREEDYDATA}",
     "ECS_ALERT_SCOPE": "bucket|Namespace",
     "ECS_ALERT_INFO1": "%{WORD}",
-    "ECS_ALERT_INFO2": "%{ECS_ALERT_INFO1}: %{ECS_ALERT_SCOPE:ecs_quota_scope} %{BUCKET_NAMESPACE}(\\.%{BUCKET})?",
+    "ECS_ALERT_INFO2": "%{ECS_ALERT_INFO1}: %{ECS_ALERT_SCOPE:ecs_quota_scope} %{BUCKET_NAMESPACE}|(%{BUCKET_NAMESPACE}\\.%{BUCKET})",
     "ECS_SYMPTOM_CODE": "%{NUMBER:ecs.symptom.code}",
     "ECS_QUOTA_PREFIX": "Quota",
     "ECS_QUOTA_INFO": "%{DATA:ecs.quota.info}",
