@@ -1,5 +1,6 @@
 {
     "BUCKET": "%{NOTSPACE:ecs.bucket.name}",
+    "BUCKET_WITH_NAMESPACE": "%{NOTSPACE:ecs_namespace}\\.%{NOTSPACE:ecs_bucket_name}",
     "BUCKET_NAMESPACE": "%{NOTSPACE:ecs.namespace}",
     "BUCKET_USERNAME": "%{NOTSPACE:ecs.bucket.username}",
     "BUCKET_OPERATION": "BUCKET (CREATE|UPDATE)",
@@ -18,7 +19,7 @@
     "ECS_ALERT_TYPE": "%{GREEDYDATA}",
     "ECS_ALERT_SCOPE": "bucket|Namespace",
     "ECS_ALERT_INFO1": "%{WORD}",
-    "ECS_ALERT_INFO2": "%{ECS_ALERT_INFO1}: %{ECS_ALERT_SCOPE:ecs_quota_scope} %{BUCKET_NAMESPACE}|(%{BUCKET_NAMESPACE}\\.%{BUCKET})",
+    "ECS_ALERT_INFO2": "%{ECS_ALERT_INFO1}: %{ECS_ALERT_SCOPE:ecs_quota_scope} %{BUCKET_NAMESPACE}|%{BUCKET_WITH_NAMESPACE}",
     "ECS_SYMPTOM_CODE": "%{NUMBER:ecs.symptom.code}",
     "ECS_QUOTA_PREFIX": "Quota",
     "ECS_QUOTA_INFO": "%{DATA:ecs.quota.info}",
