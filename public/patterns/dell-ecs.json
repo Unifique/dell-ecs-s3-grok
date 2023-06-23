@@ -1,7 +1,8 @@
 {
-    "BUCKET": "%{NOTSPACE:ecs.bucket.name}",
-    "BUCKET_WITH_NAMESPACE": "%{NOTSPACE:ecs_namespace}\\.%{NOTSPACE:ecs_bucket_name}",
-    "BUCKET_NAMESPACE": "%{NOTSPACE:ecs.namespace}",
+    "NAME_NORMALIZATION": "[\\w\\-\\_]+",
+    "BUCKET": "%{NAME_NORMALIZATION:ecs.bucket.name}",
+    "BUCKET_WITH_NAMESPACE": "%{NAME_NORMALIZATION:ecs_namespace}\\.%{NAME_NORMALIZATION:ecs_bucket_name}",
+    "BUCKET_NAMESPACE": "%{NAME_NORMALIZATION:ecs.namespace}",
     "BUCKET_USERNAME": "%{NOTSPACE:ecs.bucket.username}",
     "BUCKET_OPERATION": "BUCKET (CREATE|UPDATE)",
     "BUCKET_CREATED_MESSAGE": "has been created",
