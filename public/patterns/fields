@@ -11,11 +11,13 @@ ecs.login.logout_message
 ecs.message
 ecs.mgmt_user
 ecs.namespace
+ecs.quota.alert
 ecs.quota.info
 ecs.quota.namespace
 ecs.quota.bucket
 ecs.quota.exceeded
 ecs.quota.soft
+ecs.quota.scope
 ecs.quota.hard
 ecs.symptom.code
 ecs.client.ip
